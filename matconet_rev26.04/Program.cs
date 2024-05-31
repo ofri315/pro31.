@@ -66,27 +66,7 @@ namespace matconet_rev26._04
             }
             return false;
         }
-        //בגרות 2021ב
-        public static bool IsArranged(Node<int> lst)
-        {
-            Node<int> pos = lst;
-            int count = countlist(lst);
-            if (count % 2 != 0) return false;
-            int max = pos.GetValue();
-            for (int i = 0; i < count / 2; i++)
-            {
-                if (pos.GetValue() > max)
-                    max = pos.GetValue();
-                pos = pos.GetNext();
-            }
-            while (pos != null)
-            {
-                if (pos.GetValue() < max)
-                    return false;
-                pos = pos.GetNext();
-            }
-            return true;
-        }
+
         public static bool IsPrefix(Node<int> lst1, Node<int> lst2)
         {
             Node<int> pos1 = lst1;
